@@ -14,7 +14,7 @@
 
         <q-toolbar-title> Sistema de Cartões - Mestre Vitalino</q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>SisCartão v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 

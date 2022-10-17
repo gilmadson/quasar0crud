@@ -83,6 +83,13 @@
         class="float-right"
         text-color="primary"
         :to="{name: 'home'}" />
+        <q-btn
+        label="Entregar"
+        color="brown-5"
+        class="float-right"
+        text-color="secundarys"
+        :to="{name: 'home'}"
+        @click="Entrega"/>
     </div>
     </q-form>
   </q-page>
@@ -127,6 +134,12 @@ export default defineComponent({
       data_cricao: Date.now()
     })
 
+    const Entrega = () => {
+      formCartao.value.ativado = 'n'
+      alert(formCartao.value.ativado)
+      onSubmit()
+    }
+
     const onSubmit = async () => {
       try {
         if (formCartao.value.id) {
@@ -143,7 +156,8 @@ export default defineComponent({
 
     return {
       formCartao,
-      onSubmit
+      onSubmit,
+      Entrega
     }
   }
 

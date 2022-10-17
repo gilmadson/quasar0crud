@@ -42,10 +42,16 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Home',
+    title: 'Cartões',
     caption: '',
     icon: 'home',
     router: { name: 'home' }
+  },
+  {
+    title: 'Agendamento',
+    caption: '',
+    icon: 'info',
+    router: { name: 'Agenda' }
   }
 ]
 

@@ -1,16 +1,16 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const routes = require('./routes/index')
+const cors = require('cors')
 
-const books = []
+const port = 3000
 
 const app = express()
 
-app.use(express.json)
+app.use(cors())
+app.use(bodyParser.json())
+app.use('/', routes)
 
-app.post('/books', (req, res) => {
-  const { id, title, autor, publishedAt } = req.body
-  const book = { id, title, autor, publishedAt }
-  books.push(book)
-  return res.status(201).json(book)
+app.listen(port, () => {
+  console.log(`Server is runnig at localhost:${port}`)
 })
-
-app.listen(3000, () => console.log('Server is running on port 3000'))

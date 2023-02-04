@@ -1,10 +1,10 @@
 const dbConfig = {
-  server: 'PE7466SR091\\SR_2642',
+  server: 'PE7466SR091',
   database: 'T',
-  user: 'sr2642',
+  user: 'sa',
   password: 'sr2642',
   encrypt: false
 
 }
 
-module.exports = dbConfig
+export default dbConfig

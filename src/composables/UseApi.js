@@ -37,11 +37,12 @@ export default function useApi (url) {
     }
   }
 
-  const EntregaCartao = async (id) => {
+  const EntregarCartao = async (id) => {
     try {
       const form = getById(id)
-      form.value.ativado = 'n'
+      form.ativado = 'n'
       const { data } = await api.put(`${url}/${form.id}`, form)
+      //      data.value.ativado = 'n'
       return data
     } catch (err) {
       throw new Error(err)
@@ -53,7 +54,7 @@ export default function useApi (url) {
       const { data } = await api.delete(`${url}/${id}`)
       return data
     } catch (err) {
-      throw new Error(err)
+      throw console.log(err)
     }
   }
 
@@ -63,6 +64,6 @@ export default function useApi (url) {
     update,
     remove,
     getById,
-    EntregaCartao
+    EntregarCartao
   }
 }

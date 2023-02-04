@@ -47,7 +47,7 @@ export default defineComponent({
     const loading = ref(false)
     const { list, remove, EntregaCartao } = postsService()
     const columns = [
-      { name: 'id', field: 'id', label: 'id', requerid: 'true', sortable: true, align: 'left' },
+      { name: 'id', field: 'id', label: 'id', required: 'true', sortable: true, align: 'left' },
       { name: 'Nome', field: 'Nome', label: 'Nome', sortable: true, align: 'left' },
       { name: 'Cartao', field: 'Cartao', label: 'Cartao', sortable: true, align: 'left' },
       { name: 'Nis', field: 'Nis', label: 'NIS', sortable: true, align: 'left' },

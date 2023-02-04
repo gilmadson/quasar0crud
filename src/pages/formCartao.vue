@@ -144,11 +144,14 @@ export default defineComponent({
       try {
         if (formCartao.value.id) {
           await update(formCartao.value)
+          console.log('Alterado do com Sucesso')
         } else {
           await post(formCartao.value)
-          $q.notify({ message: 'Cadastrodo com sucesso', icon: 'check', color: 'positive' })
+          $q.notify({ message: 'Cadastro do com Sucesso', icon: 'check', color: 'positive' })
+          console.log('Cadastro do com Sucesso')
         }
         router.push({ name: 'home' })
+        console.log('conclui tudo')
       } catch (e) {
         console.log(e)
       }
